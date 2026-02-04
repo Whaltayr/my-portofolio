@@ -190,3 +190,35 @@ if (aboutContainer && typeof gsap !== 'undefined') {
             });
         });
     }
+
+    // assets/js/script.js
+
+// 1. Function to Change Language
+function changeLanguage(lang) {
+    // Save to LocalStorage so it remembers preference
+    localStorage.setItem('preferredLang', lang);
+
+    // Update Text Content
+    const elements = document.querySelectorAll('[data-i18n]');
+    elements.forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang][key]) {
+            // Handle HTML inside strings (like <br>)
+            el.innerHTML = translations[lang][key];
+        }
+    });
+
+    // Update Buttons Styling
+    document.getElementById('btn-en').classList.remove('active');
+    document.getElementById('btn-pt').classList.remove('active');
+    document.getElementById('btn-' + lang).classList.add('active');
+}
+
+// 2. Run on Page Load
+document.addEventListener("DOMContentLoaded", () => {
+    // Check if user has a saved preference, otherwise default to English
+    const savedLang = localStorage.getItem('preferredLang') || 'en';
+    changeLanguage(savedLang);
+    
+    // ... rest of your existing GSAP/Cursor code ...
+});
