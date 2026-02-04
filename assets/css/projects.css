@@ -1,0 +1,161 @@
+/* ========================================= */
+/* PROJECTS PAGE (GALLERY)                   */
+/* ========================================= */
+.repo-page-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 120px 20px 60px;
+}
+
+.repo-header {
+  text-align: left;
+  margin-bottom: 60px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 30px;
+}
+.repo-header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: var(--text-main);
+}
+
+/* Custom Back Button */
+.back-btn-wrapper {
+  margin-bottom: 40px;
+}
+.custom-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 10px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.02);
+}
+.custom-back-btn:hover {
+  background: var(--accent);
+  color: #000;
+  border-color: var(--accent);
+  transform: translateX(-5px);
+}
+
+/* --- THE GALLERY GRID --- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 40px;
+  padding-bottom: 50px;
+  align-items: stretch;
+}
+
+.gallery-card {
+  background: #141414;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  transition:
+    transform 0.3s,
+    border-color 0.3s;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.gallery-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.gallery-image {
+  width: 100%;
+  height: 240px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.gallery-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.gallery-card:hover .gallery-image img {
+  transform: scale(1.05);
+}
+
+.gallery-content {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.gallery-tags {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.gallery-tags span {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 6px 12px;
+  border-radius: 50px;
+  color: #ccc;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  letter-spacing: 0.5px;
+}
+.gallery-tags.design span {
+  color: #bd93f9;
+  border-color: rgba(189, 147, 249, 0.3);
+}
+
+.gallery-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  color: #fff;
+  line-height: 1.2;
+}
+.gallery-card p {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.gallery-link {
+  margin-top: auto;
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+.gallery-link:hover {
+  gap: 12px;
+  filter: brightness(1.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .repo-page-container {
+    padding-top: 100px;
+  }
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .repo-header h1 {
+    font-size: 2.2rem;
+  }
+}

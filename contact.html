@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Josivaldo Ferreira</title>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
+    <link rel="stylesheet" href="assets/css/global.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -13,82 +14,101 @@
     <div class="cursor-dot"></div>
     <div class="cursor-outline"></div>
 
-    
-<header class="main-header">
-    <nav class="navbar">
-        
-        <div class="nav-group desktop-only">
-            <a href="index.html" class="nav-link">Home</a>
-            <a href="projects.html" class="nav-link">Vault</a>
-            <a href="contact.html" class="nav-link">Contact</a>
-        </div>
-
-        <div class="nav-divider desktop-only"></div>
-
-        <a href="https://wa.me/264932783626" target="_blank" class="nav-cta">
-            <img src="assets/icon/whatsapp-white.svg" alt="WhatsApp" class="cta-icon">
-            <span class="cta-text">Let's Chat</span>
-        </a>
-
-        <button class="hamburger" aria-label="Menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
-
-    </nav>
-</header>
-
-<div class="mobile-menu-overlay">
-    <nav class="mobile-links">
-        <a href="index.html" class="mobile-link">Home</a>
-        <a href="projects.html" class="mobile-link">Code Vault</a>
-        <a href="contact.html" class="mobile-link">Contact</a>
-    </nav>
-    <div class="mobile-footer">
-        <p>Based in Namibia 🇳🇦</p>
+         <div class="lang-floating-wrapper">
+        <button onclick="changeLanguage('pt')" class="lang-btn-float" id="float-pt">PT</button>
+        <span class="lang-divider">|</span>
+        <button onclick="changeLanguage('en')" class="lang-btn-float" id="float-en">EN</button>
     </div>
-</div>
+
+    <header class="main-header">
+        <nav class="navbar">
+            
+            <div class="nav-group desktop-only">
+                <a href="index.html" class="nav-link" data-i18n="nav.home">Home</a>
+                <a href="projects.html" class="nav-link" data-i18n="nav.vault">Vault</a>
+                <a href="contact.html" class="nav-link active" data-i18n="nav.contact">Contact</a>
+            </div>
+
+
+            <div class="nav-divider desktop-only"></div>
+
+            <a href="https://wa.me/264932783626" target="_blank" class="nav-cta">
+                <img src="assets/icons/whatsapp-white.svg" alt="WhatsApp" class="cta-icon">
+                <span class="cta-text" data-i18n="nav.chat">Let's Chat</span>
+            </a>
+
+            <button class="hamburger" aria-label="Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+        </nav>
+    </header>
+
+    <div class="mobile-menu-overlay">
+        <nav class="mobile-links">
+            <a href="index.html" class="mobile-link" data-i18n="nav.home">Home</a>
+            <a href="projects.html" class="mobile-link" data-i18n="nav.vault">Code Vault</a>
+            <a href="contact.html" class="mobile-link" data-i18n="nav.contact">Contact</a>
+            
+            <a href="https://wa.me/264932783626" target="_blank" class="mobile-link mobile-cta">
+                <i class="fa-brands fa-whatsapp"></i> <span data-i18n="nav.chat">Chat on WhatsApp</span>
+            </a>
+
+            <div class="lang-switch" style="font-size: 1.5rem; margin-top: 20px;">
+                <button onclick="changeLanguage('en')" style="font-size: 1.5rem;" class="lang-btn">EN</button> / 
+                <button onclick="changeLanguage('pt')" style="font-size: 1.5rem;" class="lang-btn">PT</button>
+            </div>
+        </nav>
+        <div class="mobile-footer">
+            <p data-i18n="mobile.footer">Based in Namibia 🇳🇦</p>
+        </div>
+    </div>
 
     <main class="contact-container">
         <section class="contact-hero">
-            <h5 class="section-subtitle">Get in touch</h5>
-            <h1 class="reveal-text">Let's build something <br>extraordinary together.</h1>
+            <h5 class="section-subtitle" data-i18n="contact.subtitle">Get in touch</h5>
+            <h1 class="reveal-text" data-i18n="contact.title">Let's build something <br>extraordinary together.</h1>
         </section>
 
         <div class="contact-grid">
             <div class="contact-info">
                 <div class="info-block">
-                    <span>Email me at</span>
-                    <h2 id="email-text">josiwhatson@gmail.com</h2> <button class="copy-btn" onclick="copyEmail()">Copy Email <i class="fa-regular fa-copy"></i></button>
+                    <span data-i18n="contact.email">Email me at</span>
+                    <h2 id="email-text">josivaldo@example.com</h2> 
+                    <button class="copy-btn" onclick="copyEmail()">
+                        <span data-i18n="contact.btn.copy">Copy Email</span> <i class="fa-regular fa-copy"></i>
+                    </button>
                 </div>
 
                 <div class="info-block">
-                    <span>Socials</span>
+                    <span data-i18n="contact.socials">Socials</span>
                     <div class="contact-socials">
-                        
-                        <a href="https://github.com/Whaltayr" target="_blank">GitHub</a>
-                        <a href="https://wa.me/264932783626" target="_blank">Whatsapp</a>
+                        <a href="#" target="_blank">LinkedIn</a>
+                        <a href="#" target="_blank">GitHub</a>
+                        <a href="#" target="_blank">Dribbble</a>
                     </div>
                 </div>
 
                 <div class="info-block">
-                    <span>Current Location</span>
-                    <p>Windhoek, Namibia 🇳🇦</p>
+                    <span data-i18n="contact.loc">Current Location</span>
+                    <p data-i18n="info.country">Namibia 🇳🇦</p>
                 </div>
             </div>
 
             <div class="contact-form-wrapper">
-                <form action="https://formspree.io/f/your-id" method="POST" class="contact-form"> <div class="form-group">
-                        <label>Your Name</label>
-                        <input type="text" name="name" placeholder="John Doe" required>
+                <form action="https://formspree.io/f/your-id" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label data-i18n="form.name">Your Name</label>
+                        <input type="text" name="name" required>
                     </div>
                     <div class="form-group">
-                        <label>Your Email</label>
-                        <input type="email" name="email" placeholder="john@example.com" required>
+                        <label data-i18n="form.email">Your Email</label>
+                        <input type="email" name="email" required>
                     </div>
                     <div class="form-group">
-                        <label>Subject</label>
+                        <label data-i18n="form.subject">Subject</label>
                         <select name="subject">
                             <option value="web-dev">Web Development</option>
                             <option value="ui-design">UI/Web Design</option>
@@ -97,41 +117,68 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label>Message</label>
-                        <textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                        <label data-i18n="form.message">Message</label>
+                        <textarea name="message" rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="submit-btn">Send Message ↗</button>
+                    <button type="submit" class="submit-btn" data-i18n="form.btn">Send Message ↗</button>
                 </form>
             </div>
         </div>
     </main>
 
     <footer class="site-footer">
-    <div class="footer-content">
-        <div class="footer-left">
-            <p>&copy; 2026 Josivaldo Ferreira. All Rights Reserved.</p>
+        <div class="footer-content">
+            <div class="footer-left">
+                <p data-i18n="footer.copy">&copy; 2026 Josivaldo Ferreira. All Rights Reserved.</p>
+            </div>
+            <div class="footer-right">
+                <a href="https://github.com/Whaltayr" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+                <a href="mailto:your@email.com" data-i18n="nav.contact">Email</a>
+            </div>
         </div>
-        <div class="footer-right">
-            <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-            <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
-            <a href="mailto:your@email.com">Email</a>
-        </div>
-    </div>
-</footer>
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="assets/js/translations.js"></script>
     <script src="assets/js/script.js"></script>
+    
     <script>
         // Simple Copy to Clipboard Function
         function copyEmail() {
             const email = document.getElementById('email-text').innerText;
             navigator.clipboard.writeText(email);
             const btn = document.querySelector('.copy-btn');
+            // We can't translate this dynamic JS easily without complexity, 
+            // so we'll leave the icon change
+            const originalText = btn.innerHTML;
             btn.innerHTML = 'Copied! <i class="fa-solid fa-check"></i>';
             setTimeout(() => {
-                btn.innerHTML = 'Copy Email <i class="fa-regular fa-copy"></i>';
+                btn.innerHTML = originalText;
             }, 2000);
         }
+
+        // Auto-select dropdown logic
+        window.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const service = urlParams.get('service');
+            
+            if (service) {
+                const selectElement = document.querySelector('select[name="subject"]');
+                if (selectElement) {
+                    const optionsMap = {
+                        'web-dev': 'web-dev',
+                        'ui-design': 'ui-design',
+                        'mobile-app': 'web-dev', 
+                        'creative': 'creative'
+                    };
+                    if (optionsMap[service]) {
+                        selectElement.value = optionsMap[service];
+                        document.querySelector('.contact-form').scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            }
+        });
     </script>
 </body>
 </html>

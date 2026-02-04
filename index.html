@@ -24,13 +24,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/global.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
 
 <body>
 
     <div class="cursor-dot"></div>
     <div class="cursor-outline"></div>
+
+     <div class="lang-floating-wrapper">
+        <button onclick="changeLanguage('pt')" class="lang-btn-float" id="float-pt">PT</button>
+        <span class="lang-divider">|</span>
+        <button onclick="changeLanguage('en')" class="lang-btn-float" id="float-en">EN</button>
+    </div>
 
     <header class="main-header">
         <nav class="navbar">
@@ -41,16 +49,11 @@
                 <a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a>
             </div>
 
-            <div class="lang-switch desktop-only" style="margin-left: 20px; display:flex; gap:5px; color:#888;">
-                <button onclick="changeLanguage('en')" class="lang-btn active" id="btn-en">EN</button>
-                <span>/</span>
-                <button onclick="changeLanguage('pt')" class="lang-btn" id="btn-pt">PT</button>
-            </div>
 
             <div class="nav-divider desktop-only"></div>
 
             <a href="https://wa.me/264932783626" target="_blank" class="nav-cta">
-                <img src="assets/icons/whatsapp.png" alt="WhatsApp" class="cta-icon">
+                <img src="assets/icons/whatsapp-white.svg" alt="WhatsApp" class="cta-icon">
                 <span class="cta-text" data-i18n="nav.chat">Let's Chat</span>
             </a>
 
@@ -73,75 +76,65 @@
                 <i class="fa-brands fa-whatsapp"></i> <span data-i18n="nav.chat">Chat on WhatsApp</span>
             </a>
 
-            <div class="lang-switch" style="font-size: 1.5rem; margin-top: 20px;">
-                <button onclick="changeLanguage('en')" style="font-size: 1.5rem;" class="lang-btn">EN</button> /
-                <button onclick="changeLanguage('pt')" style="font-size: 1.5rem;" class="lang-btn">PT</button>
-            </div>
+
         </nav>
         <div class="mobile-footer">
             <p data-i18n="mobile.footer">Based in Namibia 🇳🇦</p>
         </div>
     </div>
 
+   
+
     <main>
 
-        <section class="portfolio-container">
+    <section class="portfolio-container">
+    
+    <div class="bento-box hero">
+        <div class="content">
+            <h5 data-i18n="hero.hello">Hello, I'm Josivaldo</h5>
+            <h1 data-i18n="hero.title">Web Developer <br>& UI Designer</h1>
+            <p data-i18n="hero.desc">Crafting digital experiences where logic meets aesthetics.</p>
+        </div>
+        <div class="availability-badge">
+            <span class="dot"></span> <span data-i18n="badge.avail">Available for work</span>
+        </div>
+    </div>
 
-            <div class="bento-box hero" data-scroll-speed="1.2">
-                <div class="content">
-                    <h5 data-i18n="hero.hello">Hello, I'm Josivaldo</h5>
-                    <h1 data-i18n="hero.title">Web Developer <br>& UI Designer</h1>
-                    <p data-i18n="hero.desc">Crafting digital experiences where logic meets aesthetics.</p>
-                    <div class="tags">
-                        <span data-i18n="tag.frontend">Frontend</span>
-                        <span data-i18n="tag.ui">UI/UX</span>
-                        <span>GSAP</span>
-                    </div>
-                </div>
-                <div class="availability-badge">
-                    <span class="dot"></span> <span data-i18n="badge.avail">Available for work</span>
-                </div>
-            </div>
+    <div class="bento-box photo-box">
+        <img src="assets/img/image.jpg" alt="Josivaldo Ferreira" class="profile-img">
+    </div>
 
-            <div class="bento-box photo-box" data-scroll-speed="1.0">
-                <img src="assets/img/image.jpg" alt="Josivaldo Ferreira" class="profile-img">
-                <div class="overlay"></div>
-            </div>
+  <div class="bento-box stack">
+    <h3 data-i18n="stack.title">The Arsenal</h3>
+    <div class="icon-grid">
+        <div class="tech-item"><i class="devicon-html5-plain"></i> HTML5</div>
+        <div class="tech-item"><i class="devicon-css3-plain"></i> CSS3</div>
+        <div class="tech-item"><i class="devicon-javascript-plain"></i> JS</div>
+        <div class="tech-item"><i class="devicon-react-original"></i> React</div>
+        <div class="tech-item"><i class="fa-solid fa-bolt"></i> GSAP</div>
+        <div class="tech-item"><i class="devicon-figma-plain"></i> Figma</div>
+        <div class="tech-item"><i class="devicon-flutter-plain"></i> Flutter</div>
+        <div class="tech-item"><i class="devicon-sass-original"></i> SASS</div>
+        <div class="tech-item"><i class="devicon-php-plain"></i> PHP</div>
+        <div class="tech-item"><i class="devicon-linux-plain"></i> Linux</div>
+          <div class="tech-item"><i class="devicon-docker-plain"></i> Docker</div>
+    </div>
+</div>
 
-            <div class="bento-box stack">
-                <h3 data-i18n="stack.title">The Arsenal</h3>
-                <div class="icon-grid">
-                    <div class="tech-item">HTML5</div>
-                    <div class="tech-item">CSS3</div>
-                    <div class="tech-item">JS (ES6+)</div>
-                    <div class="tech-item">GSAP</div>
-                    <div class="tech-item">React</div>
-                    <div class="tech-item">Figma</div>
-                    <div class="tech-item">Flutter</div>
-                    <div class="tech-item">Dart</div>
-                    <div class="tech-item">Git</div>
-                    <div class="tech-item">SASS</div>
-                    <div class="tech-item">Linux</div>
-                    <div class="tech-item">PHP</div>
+   <div class="bento-box quote-box">
+    <div class="quote-content">
+        <h3 data-i18n="quote.title">Design Philosophy</h3>
+        <h2 data-i18n="quote.text">"Seja humilde em suas aspirações, gracioso em seu sucesso e resiliente em seus fracassos."</h2>
+    </div>
+</div>
 
-                </div>
-            </div>
+    <div class="bento-box info">
+        <h3 data-i18n="info.based">Based in</h3>
+        <h2 data-i18n="info.country">Namibia 🇳🇦</h2>
+        <div class="time-display" id="time-display">13:40</div>
+    </div>
 
-            <div class="bento-box quote-box">
-                <div class="quote-content">
-                    <h3 data-i18n="quote.title">Design Philosophy</h3>
-                    <h2 data-i18n="quote.text">"Simplicity is the ultimate sophistication."</h2>
-                </div>
-            </div>
-
-            <div class="bento-box info">
-                <h3 data-i18n="info.based">Based in</h3>
-                <h2 data-i18n="info.country">Namibia 🇳🇦</h2>
-                <p>Windhoek, Khomas</p>
-                <div class="time-display" id="time-display">10:00 AM</div>
-            </div>
-
-        </section>
+</section>
 
         <section class="services-section">
             <div class="section-header">
@@ -163,9 +156,11 @@
                             <i class="fa-solid fa-code"></i>
                         </div>
                         <h3 data-i18n="serv.web">Web Development</h3>
-                        <p data-i18n="serv.web.desc">Custom websites built with clean code and modern tech (React, GSAP). Fast, SEO-friendly, and
+                        <p data-i18n="serv.web.desc">Custom websites built with clean code and modern tech (React,
+                            GSAP). Fast, SEO-friendly, and
                             responsive.</p>
-                        <a href="contact.html?service=web-dev" class="service-link" data-i18n="serv.btn.start">Start a Project →</a>
+                        <a href="contact.html?service=web-dev" class="service-link" data-i18n="serv.btn.start">Start a
+                            Project →</a>
                     </div>
                 </div>
 
@@ -181,9 +176,11 @@
                             <i class="fa-solid fa-pen-nib"></i>
                         </div>
                         <h3 data-i18n="serv.ui">UI/UX Design</h3>
-                        <p data-i18n="serv.ui.desc">Designing user interfaces that are both beautiful and intuitive. I turn complex ideas into simple,
+                        <p data-i18n="serv.ui.desc">Designing user interfaces that are both beautiful and intuitive. I
+                            turn complex ideas into simple,
                             elegant designs.</p>
-                        <a href="contact.html?service=ui-design" class="service-link" data-i18n="serv.btn.design">Discuss Design →</a>
+                        <a href="contact.html?service=ui-design" class="service-link"
+                            data-i18n="serv.btn.design">Discuss Design →</a>
                     </div>
                 </div>
 
@@ -199,8 +196,10 @@
                             <i class="fa-solid fa-mobile-screen"></i>
                         </div>
                         <h3 data-i18n="serv.app">Mobile Apps</h3>
-                        <p data-i18n="serv.app.desc">Cross-platform mobile applications using Flutter & Dart. One codebase for both iOS and Android.</p>
-                        <a href="contact.html?service=mobile-app" class="service-link" data-i18n="serv.btn.app">Build an App →</a>
+                        <p data-i18n="serv.app.desc">Cross-platform mobile applications using Flutter & Dart. One
+                            codebase for both iOS and Android.</p>
+                        <a href="contact.html?service=mobile-app" class="service-link" data-i18n="serv.btn.app">Build an
+                            App →</a>
                     </div>
                 </div>
 
@@ -216,9 +215,11 @@
                             <i class="fa-solid fa-palette"></i>
                         </div>
                         <h3 data-i18n="serv.creative">Creative Services</h3>
-                        <p data-i18n="serv.creative.desc">From flyers to digital assets. I create visual identities that make your brand stand out in the
+                        <p data-i18n="serv.creative.desc">From flyers to digital assets. I create visual identities that
+                            make your brand stand out in the
                             noise.</p>
-                        <a href="contact.html?service=creative" class="service-link" data-i18n="serv.btn.creative">Get Creative →</a>
+                        <a href="contact.html?service=creative" class="service-link" data-i18n="serv.btn.creative">Get
+                            Creative →</a>
                     </div>
                 </div>
 
@@ -238,12 +239,13 @@
                 <div class="project-content">
                     <span class="project-number">01</span>
                     <h3 class="project-title">Velvet Models</h3>
-                    <p class="project-desc" data-i18n="proj.1.desc">A high-fashion casting agency landing page. Focused on minimalism,
+                    <p class="project-desc" data-i18n="proj.1.desc">A high-fashion casting agency landing page. Focused
+                        on minimalism,
                         whitespace, and smooth typography to let the models' imagery take center stage.</p>
                     <div class="project-tech-stack">
                         <span>React</span>
                         <span>Tailwind</span>
-                        <span>Framer Motion</span>
+                        <span>GSAP</span>
                     </div>
                     <div class="project-links">
                         <a href="https://velvet-models-qnz2t05ew-whaltayrs-projects.vercel.app" target="_blank"
@@ -259,12 +261,13 @@
                 <div class="project-content">
                     <span class="project-number">02</span>
                     <h3 class="project-title">Lovelive</h3>
-                    <p class="project-desc" data-i18n="proj.2.desc">A digital sanctuary for couples. This interactive platform allows users to
+                    <p class="project-desc" data-i18n="proj.2.desc">A digital sanctuary for couples. This interactive
+                        platform allows users to
                         dedicate messages and memories to their partners, featuring a warm, emotive UI design.</p>
                     <div class="project-tech-stack">
-                        <span>Next.js</span>
-                        <span>Firebase</span>
-                        <span>Interactive UI</span>
+                        <span>React</span>
+                        <span>Tailwind</span>
+                        <span>Figma</span>
                     </div>
                     <div class="project-links">
                         <a href="https://lovelive-ez2et2d3c-whaltayrs-projects.vercel.app" target="_blank"
@@ -280,7 +283,8 @@
                 <div class="project-content">
                     <span class="project-number">03</span>
                     <h3 class="project-title">Esma Design</h3>
-                    <p class="project-desc" data-i18n="proj.3.desc">The digital headquarters for a modern web design agency. The site showcases
+                    <p class="project-desc" data-i18n="proj.3.desc">The digital headquarters for a modern web design
+                        agency. The site showcases
                         creative layouts, grid experimentation, and a strong visual hierarchy to attract premium
                         clients.</p>
                     <div class="project-tech-stack">
@@ -289,13 +293,15 @@
                         <span>GSAP</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://www.esmadesign.site/" target="_blank" class="btn-underline" data-i18n="btn.live">Live Site ↗</a>
+                        <a href="https://www.esmadesign.site/" target="_blank" class="btn-underline"
+                            data-i18n="btn.live">Live Site ↗</a>
                     </div>
                 </div>
             </div>
 
             <div style="text-align: center; margin-top: 60px;">
-                <a href="projects.html" class="btn-underline" style="font-size: 1.5rem; color: var(--accent);" data-i18n="vault.link">
+                <a href="projects.html" class="btn-underline" style="font-size: 1.5rem; color: var(--accent);"
+                    data-i18n="vault.link">
                     View All Repositories in the Vault →
                 </a>
             </div>

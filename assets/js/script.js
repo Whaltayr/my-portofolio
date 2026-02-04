@@ -192,33 +192,34 @@ if (aboutContainer && typeof gsap !== 'undefined') {
     }
 
     // assets/js/script.js
+// assets/js/script.js
 
-// 1. Function to Change Language
+// 1. Função para trocar idioma
 function changeLanguage(lang) {
-    // Save to LocalStorage so it remembers preference
     localStorage.setItem('preferredLang', lang);
 
-    // Update Text Content
+    // Atualiza Textos
     const elements = document.querySelectorAll('[data-i18n]');
     elements.forEach(el => {
         const key = el.getAttribute('data-i18n');
-        if (translations[lang][key]) {
-            // Handle HTML inside strings (like <br>)
+        if (translations[lang] && translations[lang][key]) {
             el.innerHTML = translations[lang][key];
         }
     });
 
-    // Update Buttons Styling
-    document.getElementById('btn-en').classList.remove('active');
-    document.getElementById('btn-pt').classList.remove('active');
-    document.getElementById('btn-' + lang).classList.add('active');
+    // Atualiza estilo dos botões flutuantes
+    document.querySelectorAll('.lang-btn-float').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    const activeBtn = document.getElementById('float-' + lang);
+    if(activeBtn) activeBtn.classList.add('active');
 }
 
-// 2. Run on Page Load
+// 2. Executar ao carregar (Padrão PT)
 document.addEventListener("DOMContentLoaded", () => {
-    // Check if user has a saved preference, otherwise default to English
-    const savedLang = localStorage.getItem('preferredLang') || 'en';
+    // Se não houver preferência salva, usa 'pt'
+    const savedLang = localStorage.getItem('preferredLang') || 'pt';
     changeLanguage(savedLang);
     
-    // ... rest of your existing GSAP/Cursor code ...
+    // ... resto do seu código GSAP ...
 });
