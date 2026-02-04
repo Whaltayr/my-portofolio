@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Josivaldo Ferreira | Creative Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <main>
+        
+        <section class="portfolio-container">
+            
+            <div class="bento-box hero" data-scroll-speed="1.2">
+                <div class="content">
+                    <h5>Hello, I'm Josivaldo</h5>
+                    <h1>Web Developer <br>& UI Designer</h1>
+                    <p>Crafting digital experiences where logic meets aesthetics.</p>
+                    <div class="tags">
+                        <span>Frontend</span>
+                        <span>UI/UX</span>
+                        <span>GSAP</span>
+                    </div>
+                </div>
+                <div class="availability-badge">
+                    <span class="dot"></span> Available for work
+                </div>
+            </div>
+
+            <div class="bento-box photo-box" data-scroll-speed="1.0">
+                <img src="assets/img/image.jpg" alt="Josivaldo Ferreira" class="profile-img">
+                <div class="overlay"></div>
+            </div>
+
+            <div class="bento-box info">
+                <h3>Based in</h3>
+                <h2>Namibia 🇳🇦</h2>
+                <p>Windhoek, Khomas</p>
+                <div class="time-display" id="time-display">10:00 AM</div>
+            </div>
+            <div class="bento-box stack">
+                <h3>Tech Stack</h3>
+                <div class="icon-grid">
+                    <div class="tech-item">HTML5</div>
+                    <div class="tech-item">CSS3</div>
+                    <div class="tech-item">JS (ES6+)</div>
+                    <div class="tech-item">GSAP</div>
+                    <div class="tech-item">React</div>
+                    <div class="tech-item">Figma</div>
+                </div>
+            </div>
+
+
+            <div class="bento-box project project-1">
+                <div class="project-info">
+                    <h4>Recent Work</h4>
+                    <h2>E-Commerce Redesign</h2>
+                    <a href="#work" class="btn-link">View Case Study ↗</a>
+                </div>
+            </div>
+
+            <div class="bento-box social">
+                <h3>Let's Connect</h3>
+                <div class="social-links">
+                    <a href="#">LinkedIn</a>
+                    <a href="#">GitHub</a>
+                    <a href="#">Email</a>
+                </div>
+            </div>
+
+        </section> 
+        <section class="work-section" id="work">
+            <div class="work-header">
+                <h5 class="section-subtitle">Portfolio</h5>
+                <h2 class="section-title">Selected Works</h2>
+            </div>
+
+            <div class="project-item">
+                <div class="project-image-container">
+                    <img src="project1.jpg" alt="E-Commerce Project" class="project-img">
+                </div>
+                <div class="project-content">
+                    <span class="project-number">01</span>
+                    <h3 class="project-title">Neon E-Commerce</h3>
+                    <p class="project-desc">A high-performance e-commerce platform built with React and GSAP. Features include seamless page transitions, a custom cart logic, and a dark-mode first UI design.</p>
+                    <div class="project-tech-stack">
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>GSAP</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn-underline">Live Demo</a>
+                        <a href="#" class="btn-underline">GitHub Repo</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item reverse">
+                <div class="project-image-container">
+                    <img src="project2.jpg" alt="Finance App" class="project-img">
+                </div>
+                <div class="project-content">
+                    <span class="project-number">02</span>
+                    <h3 class="project-title">FinTech Wallet App</h3>
+                    <p class="project-desc">A cross-platform mobile application developed with Flutter and Dart. Designed to simplify personal finance with real-time data visualization and secure Firebase authentication.</p>
+                    <div class="project-tech-stack">
+                        <span>Flutter</span>
+                        <span>Dart</span>
+                        <span>Firebase</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn-underline">View Case Study</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-image-container">
+                    <img src="project3.jpg" alt="Architecture Portfolio" class="project-img">
+                </div>
+                <div class="project-content">
+                    <span class="project-number">03</span>
+                    <h3 class="project-title">Arch Studio Landing</h3>
+                    <p class="project-desc">An award-winning landing page design focused on typography and negative space. Implemented with raw HTML/SCSS to ensure maximum performance and pixel-perfect responsiveness.</p>
+                    <div class="project-tech-stack">
+                        <span>HTML5</span>
+                        <span>Sass</span>
+                        <span>Vanilla JS</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn-underline">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
