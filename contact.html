@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Josivaldo Ferreira</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <header class="main-header">
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#work" class="nav-link">Work</a></li>
+                <li><a href="projects.html" class="nav-link">Vault</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contact-container">
+        <section class="contact-hero">
+            <h5 class="section-subtitle">Get in touch</h5>
+            <h1 class="reveal-text">Let's build something <br>extraordinary together.</h1>
+        </section>
+
+        <div class="contact-grid">
+            <div class="contact-info">
+                <div class="info-block">
+                    <span>Email me at</span>
+                    <h2 id="email-text">josiwhatson@gmail.com</h2> <button class="copy-btn" onclick="copyEmail()">Copy Email <i class="fa-regular fa-copy"></i></button>
+                </div>
+
+                <div class="info-block">
+                    <span>Socials</span>
+                    <div class="contact-socials">
+                        
+                        <a href="#" target="_blank">GitHub</a>
+                        <a href="#" target="_blank">Whatsapp</a>
+                    </div>
+                </div>
+
+                <div class="info-block">
+                    <span>Current Location</span>
+                    <p>Windhoek, Namibia 🇳🇦</p>
+                </div>
+            </div>
+
+            <div class="contact-form-wrapper">
+                <form action="https://formspree.io/f/your-id" method="POST" class="contact-form"> <div class="form-group">
+                        <label>Your Name</label>
+                        <input type="text" name="name" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Your Email</label>
+                        <input type="email" name="email" placeholder="john@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Subject</label>
+                        <select name="subject">
+                            <option value="web-dev">Web Development</option>
+                            <option value="ui-design">UI/Web Design</option>
+                            <option value="creative">Flyers/Graphic Design</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message ↗</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+    <div class="footer-content">
+        <div class="footer-left">
+            <p>&copy; 2026 Josivaldo Ferreira. All Rights Reserved.</p>
+        </div>
+        <div class="footer-right">
+            <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+            <a href="mailto:your@email.com">Email</a>
+        </div>
+    </div>
+</footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script>
+        // Simple Copy to Clipboard Function
+        function copyEmail() {
+            const email = document.getElementById('email-text').innerText;
+            navigator.clipboard.writeText(email);
+            const btn = document.querySelector('.copy-btn');
+            btn.innerHTML = 'Copied! <i class="fa-solid fa-check"></i>';
+            setTimeout(() => {
+                btn.innerHTML = 'Copy Email <i class="fa-regular fa-copy"></i>';
+            }, 2000);
+        }
+    </script>
+</body>
+</html>

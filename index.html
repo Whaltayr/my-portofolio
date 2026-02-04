@@ -1,81 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Josivaldo Ferreira - Web Developer & UI Designer based in Namibia. Specializing in React, GSAP, and Flutter development.">
+    <meta name="keywords" content="Web Developer, UI Designer, Namibia, Frontend, React, GSAP, Flutter, Portfolio">
+    <meta name="author" content="Josivaldo Ferreira">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com/">
+    <meta property="og:title" content="Josivaldo Ferreira | Creative Developer">
+    <meta property="og:description" content="Crafting digital experiences where logic meets aesthetics.">
+    <meta property="og:image" content="https://yourwebsite.com/assets/img/preview-card.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourwebsite.com/">
+    <meta property="twitter:title" content="Josivaldo Ferreira | Creative Developer">
+    <meta property="twitter:description" content="Crafting digital experiences where logic meets aesthetics.">
+    <meta property="twitter:image" content="https://yourwebsite.com/assets/img/preview-card.jpg">
     <title>Josivaldo Ferreira | Creative Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
 
     <div class="cursor-dot"></div>
     <div class="cursor-outline"></div>
 
-    <main>
+<header class="main-header">
+    <nav class="navbar">
         
-        <section class="portfolio-container">
-            
-            <div class="bento-box hero" data-scroll-speed="1.2">
-                <div class="content">
-                    <h5>Hello, I'm Josivaldo</h5>
-                    <h1>Web Developer <br>& UI Designer</h1>
-                    <p>Crafting digital experiences where logic meets aesthetics.</p>
-                    <div class="tags">
-                        <span>Frontend</span>
-                        <span>UI/UX</span>
-                        <span>GSAP</span>
+        <div class="nav-group desktop-only">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="projects.html" class="nav-link">Vault</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+
+        <div class="nav-divider desktop-only"></div>
+
+        <a href="https://wa.me/264932783626" target="_blank" class="nav-cta">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span class="cta-text">Let's Chat</span>
+        </a>
+
+        <button class="hamburger" aria-label="Menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+    </nav>
+</header>
+
+<div class="mobile-menu-overlay">
+    <nav class="mobile-links">
+        <a href="index.html" class="mobile-link">Home</a>
+        <a href="projects.html" class="mobile-link">Code Vault</a>
+        <a href="contact.html" class="mobile-link">Contact</a>
+    </nav>
+    <div class="mobile-footer">
+        <p>Based in Namibia 🇳🇦</p>
+    </div>
+</div>
+
+    <main>
+
+       <section class="portfolio-container">
+    
+    <div class="bento-box hero" data-scroll-speed="1.2">
+        <div class="content">
+            <h5>Hello, I'm Josivaldo</h5>
+            <h1>Web Developer <br>& UI Designer</h1>
+            <p>Crafting digital experiences where logic meets aesthetics.</p>
+            <div class="tags">
+                <span>Frontend</span>
+                <span>UI/UX</span>
+                <span>GSAP</span>
+            </div>
+        </div>
+        <div class="availability-badge">
+            <span class="dot"></span> Available for work
+        </div>
+    </div>
+
+    <div class="bento-box photo-box" data-scroll-speed="1.0">
+        <img src="assets/img/image.jpg" alt="Josivaldo Ferreira" class="profile-img">
+        <div class="overlay"></div>
+    </div>
+
+    <div class="bento-box stack">
+        <h3>The Arsenal</h3>
+        <div class="icon-grid">
+            <div class="tech-item">HTML5</div>
+            <div class="tech-item">CSS3</div>
+            <div class="tech-item">JS (ES6+)</div>
+            <div class="tech-item">GSAP</div>
+            <div class="tech-item">React</div>
+            <div class="tech-item">Figma</div>
+            <div class="tech-item">Flutter</div>
+            <div class="tech-item">Dart</div>
+            <div class="tech-item">Git</div>
+        </div>
+    </div>
+
+    <div class="bento-box quote-box">
+        <div class="quote-content">
+            <h3>Design Philosophy</h3>
+            <h2>"Simplicity is the ultimate sophistication."</h2>
+        </div>
+    </div>
+
+    <div class="bento-box info">
+        <h3>Based in</h3>
+        <h2>Namibia 🇳🇦</h2>
+        <p>Windhoek, Khomas</p>
+        <div class="time-display" id="time-display">10:00 AM</div>
+    </div>
+
+</section>
+
+        <section class="services-section">
+            <div class="section-header">
+                <h5 class="section-subtitle">What I Do</h5>
+                <h2 class="section-title">Services & Solutions</h2>
+            </div>
+
+            <div class="services-grid">
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-code"></i>
                     </div>
+                    <h3>Web Development</h3>
+                    <p>Custom websites built with clean code and modern tech (React, GSAP). Fast, SEO-friendly, and
+                        responsive.</p>
+                    <a href="contact.html?service=web-dev" class="service-link">Start a Project →</a>
                 </div>
-                <div class="availability-badge">
-                    <span class="dot"></span> Available for work
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-pen-nib"></i>
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p> designing user interfaces that are both beautiful and intuitive. I turn complex ideas into
+                        simple, elegant designs.</p>
+                    <a href="contact.html?service=ui-design" class="service-link">Discuss Design →</a>
                 </div>
-            </div>
 
-            <div class="bento-box photo-box" data-scroll-speed="1.0">
-                <img src="assets/img/image.jpg" alt="Josivaldo Ferreira" class="profile-img">
-                <div class="overlay"></div>
-            </div>
-
-            <div class="bento-box info">
-                <h3>Based in</h3>
-                <h2>Namibia 🇳🇦</h2>
-                <p>Windhoek, Khomas</p>
-                <div class="time-display" id="time-display">10:00 AM</div>
-            </div>
-            <div class="bento-box stack">
-                <h3>Tech Stack</h3>
-                <div class="icon-grid">
-                    <div class="tech-item">HTML5</div>
-                    <div class="tech-item">CSS3</div>
-                    <div class="tech-item">JS (ES6+)</div>
-                    <div class="tech-item">GSAP</div>
-                    <div class="tech-item">React</div>
-                    <div class="tech-item">Figma</div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                    </div>
+                    <h3>Mobile Apps</h3>
+                    <p>Cross-platform mobile applications using Flutter & Dart. One codebase for both iOS and Android.
+                    </p>
+                    <a href="contact.html?service=mobile-app" class="service-link">Build an App →</a>
                 </div>
-            </div>
 
-
-            <div class="bento-box project project-1">
-                <div class="project-info">
-                    <h4>Recent Work</h4>
-                    <h2>E-Commerce Redesign</h2>
-                    <a href="#work" class="btn-link">View Case Study ↗</a>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-palette"></i>
+                    </div>
+                    <h3>Creative Services</h3>
+                    <p>From flyers to digital assets. I create visual identities that make your brand stand out in the
+                        noise.</p>
+                    <a href="contact.html?service=creative" class="service-link">Get Creative →</a>
                 </div>
-            </div>
 
-            <div class="bento-box social">
-                <h3>Let's Connect</h3>
-                <div class="social-links">
-                    <a href="#">LinkedIn</a>
-                    <a href="#">GitHub</a>
-                    <a href="#">Email</a>
-                </div>
             </div>
+        </section>
 
-        </section> 
         <section class="work-section" id="work">
             <div class="work-header">
                 <h5 class="section-subtitle">Portfolio</h5>
@@ -84,67 +181,87 @@
 
             <div class="project-item">
                 <div class="project-image-container">
-                    <img src="project1.jpg" alt="E-Commerce Project" class="project-img">
+                    <img src="assets/img/velvet-preview.png" alt="Velvet Models Agency" class="project-img">
                 </div>
                 <div class="project-content">
                     <span class="project-number">01</span>
-                    <h3 class="project-title">Neon E-Commerce</h3>
-                    <p class="project-desc">A high-performance e-commerce platform built with React and GSAP. Features include seamless page transitions, a custom cart logic, and a dark-mode first UI design.</p>
+                    <h3 class="project-title">Velvet Models</h3>
+                    <p class="project-desc">A high-fashion casting agency landing page. Focused on minimalism,
+                        whitespace, and smooth typography to let the models' imagery take center stage.</p>
                     <div class="project-tech-stack">
                         <span>React</span>
-                        <span>Node.js</span>
-                        <span>GSAP</span>
+                        <span>Tailwind</span>
+                        <span>Framer Motion</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="btn-underline">Live Demo</a>
-                        <a href="#" class="btn-underline">GitHub Repo</a>
+                        <a href="https://velvet-models-qnz2t05ew-whaltayrs-projects.vercel.app" target="_blank"
+                            class="btn-underline">Live Site ↗</a>
                     </div>
                 </div>
             </div>
 
             <div class="project-item reverse">
                 <div class="project-image-container">
-                    <img src="project2.jpg" alt="Finance App" class="project-img">
+                    <img src="assets/img/lovelive-preview.png" alt="Lovelive Platform" class="project-img">
                 </div>
                 <div class="project-content">
                     <span class="project-number">02</span>
-                    <h3 class="project-title">FinTech Wallet App</h3>
-                    <p class="project-desc">A cross-platform mobile application developed with Flutter and Dart. Designed to simplify personal finance with real-time data visualization and secure Firebase authentication.</p>
+                    <h3 class="project-title">Lovelive</h3>
+                    <p class="project-desc">A digital sanctuary for couples. This interactive platform allows users to
+                        dedicate messages and memories to their partners, featuring a warm, emotive UI design.</p>
                     <div class="project-tech-stack">
-                        <span>Flutter</span>
-                        <span>Dart</span>
+                        <span>Next.js</span>
                         <span>Firebase</span>
+                        <span>Interactive UI</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="btn-underline">View Case Study</a>
+                        <a href="https://lovelive-ez2et2d3c-whaltayrs-projects.vercel.app" target="_blank"
+                            class="btn-underline">Live Site ↗</a>
                     </div>
                 </div>
             </div>
 
             <div class="project-item">
                 <div class="project-image-container">
-                    <img src="project3.jpg" alt="Architecture Portfolio" class="project-img">
+                    <img src="assets/img/esma-preview.png" alt="Esma Design Agency" class="project-img">
                 </div>
                 <div class="project-content">
                     <span class="project-number">03</span>
-                    <h3 class="project-title">Arch Studio Landing</h3>
-                    <p class="project-desc">An award-winning landing page design focused on typography and negative space. Implemented with raw HTML/SCSS to ensure maximum performance and pixel-perfect responsiveness.</p>
+                    <h3 class="project-title">Esma Design</h3>
+                    <p class="project-desc">The digital headquarters for a modern web design agency. The site showcases
+                        creative layouts, grid experimentation, and a strong visual hierarchy to attract premium
+                        clients.</p>
                     <div class="project-tech-stack">
                         <span>HTML5</span>
-                        <span>Sass</span>
-                        <span>Vanilla JS</span>
+                        <span>CSS Grid</span>
+                        <span>GSAP</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="btn-underline">Live Demo</a>
+                        <a href="https://www.esmadesign.site/" target="_blank" class="btn-underline">Live Site ↗</a>
                     </div>
                 </div>
             </div>
+
         </section>
 
     </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <p>&copy; 2026 Josivaldo Ferreira. All Rights Reserved.</p>
+            </div>
+            <div class="footer-right">
+                <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+                <a href="mailto:your@email.com">Email</a>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>
