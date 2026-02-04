@@ -51,9 +51,8 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.5); 
     z-index: 10000; /* Just below dot */
 }
-
 /* ========================================= */
-/* 3. HEADER & NAVIGATION (HAMBURGER VER.)   */
+/* 3. HEADER & NAVIGATION                    */
 /* ========================================= */
 
 .main-header {
@@ -63,8 +62,9 @@ body {
     width: 100%;
     z-index: 10000;
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Default: Center for Desktop */
     pointer-events: none;
+    padding: 0 20px;
 }
 
 .navbar {
@@ -80,15 +80,11 @@ body {
     display: flex;
     align-items: center;
     gap: 0; 
-    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: all 0.3s ease;
 }
 
 /* Links Group */
-.nav-group {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-}
+.nav-group { display: flex; align-items: center; gap: 25px; }
 
 .nav-link {
     text-decoration: none;
@@ -111,45 +107,56 @@ body {
     margin: 0 20px;
 }
 
-/* CTA Button */
+/* --- CTA BUTTON (Fixed: Always Full Size) --- */
 .nav-cta {
     background: var(--accent);
     color: #050505;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 8px 20px 8px 16px;
     border-radius: 50px;
     font-weight: 700;
     font-size: 0.9rem;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     transition: all 0.3s ease;
+    /* Ensure button doesn't shrink awkwardly */
+    flex-shrink: 0; 
 }
 .nav-cta:hover { transform: scale(1.05); background: #fff; }
 
-/* --- HAMBURGER BUTTON (Hidden on Desktop) --- */
+.cta-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+/* --- HAMBURGER BUTTON (3 Lines) --- */
 .hamburger {
-    display: none; /* Default hidden */
+    display: none; /* Hidden on Desktop */
     background: none;
     border: none;
     cursor: pointer;
     padding: 10px;
     margin-left: 10px;
-    z-index: 10002;
+    z-index: 10002; /* Higher than header to stay clickable */
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px; /* Spacing between lines */
 }
 
 .bar {
     display: block;
     width: 25px;
     height: 2px;
-    margin: 5px auto;
-    transition: all 0.3s ease-in-out;
     background-color: #fff;
+    transition: all 0.3s ease-in-out;
 }
 
-/* Hamburger Animation to X */
+/* Animation to X */
 .hamburger.active .bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.hamburger.active .bar:nth-child(2) { transform: translateY(-7px) rotate(-45deg); }
+.hamburger.active .bar:nth-child(2) { opacity: 0; }
+.hamburger.active .bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 /* --- MOBILE MENU OVERLAY --- */
 .mobile-menu-overlay {
@@ -159,27 +166,26 @@ body {
     width: 100%;
     height: 100vh;
     background-color: var(--bg-color);
-    z-index: 9999; /* Below header, above content */
+    z-index: 9999; /* Below Header (10000) */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
+    /* Animation States */
     opacity: 0;
     visibility: hidden;
+    pointer-events: none; /* Crucial Fix: Doesn't block clicks when hidden */
     transition: all 0.4s ease-in-out;
 }
 
-.mobile-menu-overlay.active {
-    opacity: 1;
-    visibility: visible;
+.mobile-menu-overlay.active { 
+    opacity: 1; 
+    visibility: visible; 
+    pointer-events: auto; /* Re-enable clicks when active */
 }
 
-.mobile-links {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    text-align: center;
-}
+.mobile-links { display: flex; flex-direction: column; gap: 30px; text-align: center; }
 
 .mobile-link {
     font-size: 2.5rem;
@@ -188,9 +194,8 @@ body {
     text-decoration: none;
     transition: 0.3s;
     transform: translateY(20px);
-    opacity: 0; /* Hidden for GSAP */
+    opacity: 0;
 }
-
 .mobile-link:hover { color: var(--accent); letter-spacing: 2px; }
 
 .mobile-footer {
@@ -202,35 +207,30 @@ body {
     letter-spacing: 2px;
 }
 
-
 /* ========================================= */
-/* MOBILE RESPONSIVENESS                     */
+/* RESPONSIVE LOGIC                          */
 /* ========================================= */
 
-@media (max-width: 768px) {
-    /* Hide Desktop Elements */
-    .desktop-only { display: none !important; }
+/* TABLET & MOBILE (< 768px) */
+@media (max-width: 568px) {
+    .main-header {
+        justify-content: flex-end; /* Push to Top Right */
+        padding-right: 20px;
+    }
 
-    /* Show Mobile Elements */
-    .hamburger { display: block; }
-    
     .navbar {
-        padding-left: 6px; /* Balance padding since text is gone */
-        justify-content: space-between;
-        width: 90%;
-        max-width: 400px;
+        padding-left: 8px; /* Reduce padding since links are gone */
+        /* Make sure container fits the Full Button + Hamburger */
+        width: auto; 
     }
 
-    /* Adjust CTA for mobile */
-    .nav-cta {
-        padding: 10px;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        justify-content: center;
-    }
-    .cta-text { display: none; }
-    .nav-cta i { font-size: 1.2rem; margin: 0; }
+    /* 1. Hide Desktop Links */
+    .desktop-only { display: none !important; }
+    
+    /* 2. Show Hamburger */
+    .hamburger { display: flex; }
+    
+    /* 3. CTA Button remains UNCHANGED (Full size, with text) */
 }
 
 /* ========================================= */
@@ -608,8 +608,8 @@ p { color: var(--text-muted); line-height: 1.6; }
     .navbar { padding: 10px 15px; gap: 15px; }
     .nav-links { gap: 15px; }
     .nav-link { font-size: 0.8rem; }
-    .nav-cta span { display: none; } /* Show only icon on small phones */
-    .nav-cta { padding: 8px; border-radius: 50%; } /* Make it a circle button */
+ 
+
 
     /* Contact & About Grid */
     .contact-grid, .about-content { grid-template-columns: 1fr; gap: 50px; }
