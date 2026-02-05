@@ -45,6 +45,7 @@ const translations = {
         "proj.1.desc": "A high-fashion casting agency landing page.",
         "proj.2.desc": "A digital sanctuary for couples.",
         "proj.3.desc": "The digital headquarters for a modern web design agency.",
+        "proj.nabrasa.desc": "A modern landing page for a premium steakhouse restaurant. Featuring an elegant menu display and reservation layout.",
         "btn.live": "Live Site ↗",
         "vault.link": "View All Repositories in the Vault →",
 
@@ -113,6 +114,7 @@ const translations = {
         "proj.1.desc": "Uma landing page para agência de modelos de alta moda.",
         "proj.2.desc": "Um santuário digital para casais. ",
         "proj.3.desc": "A sede digital de uma agência moderna de web design.",
+        "proj.nabrasa.desc": "Uma landing page moderna para uma churrascaria premium. Apresentando um menu elegante e layout para reservas.",
         "btn.live": "Ver Site ↗",
         "vault.link": "Ver Todos os Repositórios no Cofre →",
 
